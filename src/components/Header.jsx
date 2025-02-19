@@ -1,34 +1,33 @@
-import React from 'react'
 import {Link,NavLink} from 'react-router-dom'
+import React from 'react'
 
-function Header() {
+export default function Header() {
   return (
-    <>
-      <div className='flex justify-center bg-gray-600'>
-        <li>
-          <button>
-          <Link to='/' className='bg-yellow-400 text-fuchsia-600 p-4 rounded-l-full'>
-            Home
-          </Link>
-          </button>
-        </li>
-        <li>
-          <button>
-          <Link to='/about' className='bg-yellow-400 text-fuchsia-600 p-4 rounded-b-full'>
-            About
-          </Link>
-          </button>
-        </li>
-        <li>
-          <button>
-          <Link to='/github' className='bg-yellow-400 text-fuchsia-600 p-4 rounded-r-full'>
-            Github
-          </Link>
-          </button>
-        </li>
-      </div>
-    </>
+    <header className="bg-gray-900 text-white shadow-lg">
+      <nav className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          <div className="text-xl font-bold">My_Synopsis</div>
+          <div className="hidden md:flex space-x-4 absolute left-1/2 transform -translate-x-1/2">
+            <Link to="/" className="hover:text-blue-400 transition duration-300">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-blue-400 transition duration-300">
+              About
+            </Link>
+            <Link to="/github" className="hover:text-blue-400 transition duration-300">
+              GitHub
+            </Link>
+          </div>
+          <div className="md:hidden">
+            <button className="focus:outline-none">
+              <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
 
-export default Header
