@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
-      <>
-      <div className="flex flex-col items-center justify-center text-center py-10">
+      <div className='flex'>
+      <div className="flex flex-col items-center justify-center text-center py-10 px-20">
         <h1 className="text-emerald-400 text-4xl font-bold">Hey, I'm Arijit  👋</h1>
         <h2 className="text-white text-3xl font-bold">(a.k.a)</h2>
         <h2 className='text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text'> Ariz-space</h2>
@@ -16,7 +16,10 @@ const Hero = () => {
           Learn More About Me
         </Link>
       </div>
-     </>
+      <div className='scale-[0.8] origin-center mx-0'>
+      <iframe src='https://my.spline.design/abstractcryptoscene-dc1bdded479f9b84e94c031f10a25dde/' frameborder='0' width='100%' height='100%' className='w-[110vh] h-[80vh]'></iframe>
+      </div>
+     </div>
     );
   };
   

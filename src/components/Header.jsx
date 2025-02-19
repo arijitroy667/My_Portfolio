@@ -3,7 +3,8 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <header className="bg-gray-900 text-white shadow-lg">
+    //<header className="fixed top-0 left-0 w-full bg-gray-900 text-white shadow-lg">
+    <header className='fixed top-[0.5rem] left-0 w-full p-4 text-white bg-gray-950 bg-opacity-80 z-50 backdrop-blur-md'>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-xl font-bold">My_Synopsis</div>
