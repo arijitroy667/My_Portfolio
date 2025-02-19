@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
+      <>
       <div className="flex flex-col items-center justify-center text-center py-10">
         <h1 className="text-emerald-400 text-4xl font-bold">Hey, I'm Arijit  👋</h1>
         <h2 className="text-white text-3xl font-bold">(a.k.a)</h2>
@@ -15,6 +16,7 @@ const Hero = () => {
           Learn More About Me
         </Link>
       </div>
+     </>
     );
   };
   
