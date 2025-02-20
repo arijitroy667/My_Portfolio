@@ -4,6 +4,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Layout from './components/Layout'
 import Github from './components/Github'
+import Journey from './components/Journey'
 import './App.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route path='' element={<Home />}/>
       <Route path='/about' element={<About />}/>
       <Route path='/github' element={<Github />}/>
+      <Route path='/journey' element={<Journey />}/>
     </Route>
     </Routes>
   )

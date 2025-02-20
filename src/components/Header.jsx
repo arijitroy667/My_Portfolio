@@ -18,6 +18,9 @@ export default function Header() {
             <Link to="/github" className="hover:text-blue-400 transition duration-300">
               GitHub
             </Link>
+            <Link to="/journey" className="hover:text-blue-400 transition duration-300">
+              Journey
+            </Link>
           </div>
           <div className="md:hidden">
             <button className="focus:outline-none">
