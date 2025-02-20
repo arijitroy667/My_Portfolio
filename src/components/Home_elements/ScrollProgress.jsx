@@ -6,7 +6,7 @@ const ScrollProgress = () => {
   useEffect(() => {
     const updateScroll = () => {
       const scrollPos = window.scrollY;
-      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollPos / totalHeight) * 100;
       setScrollPercentage(scrollPercent);
     };
@@ -16,9 +16,9 @@ const ScrollProgress = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200">
+    <div className="fixed top-0 left-0 w-full h-1 bg-gray-950 z-50">
       <div
-        className="h-full bg-emerald-500 transition-all duration-200"
+        className="h-full bg-emerald-500 transition-all duration-150"
         style={{ width: `${scrollPercentage}%` }}
       ></div>
     </div>
