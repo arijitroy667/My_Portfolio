@@ -13,7 +13,7 @@ const techStack = [
 
 function Tech() {
   return (
-    <div className="min-h-screen text-white px-8 py-16 flex flex-col items-center">
+    <div className="pb-10 text-white px-8 py-16 flex flex-col items-center">
       {/* Animated Heading */}
       <motion.h2
         className="text-5xl font-extrabold mb-8 pb-3 text-center bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text"
