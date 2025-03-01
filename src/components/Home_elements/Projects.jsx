@@ -2,7 +2,7 @@ import React from 'react'
 
 const projects = [
     { name: "Decentralized Chess App", link: "https://github.com/manashatwar/New_Final_product", demo: "#" },
-    { name: "NFT Marketplace", link: "https://github.com/yourrepo", demo: "#" }
+    { name: "Foundry-Storage", link: "https://github.com/arijitroy667/Storage_list_Solidity-foundry", demo: "#" }
   ];
   
   const Projects = () => {
