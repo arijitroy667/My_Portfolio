@@ -17,7 +17,7 @@ const Hero = () => {
         </Link>
       </div>
       <div className='scale-[0.8] origin-center mx-0'>
-      <iframe src='https://my.spline.design/abstractcryptoscene-dc1bdded479f9b84e94c031f10a25dde/' frameborder='0' width='100%' height='100%' loading="lazy" className='w-[110vh] h-[80vh]'></iframe>
+      <iframe src='https://my.spline.design/abstractcryptoscene-dc1bdded479f9b84e94c031f10a25dde/' frameborder='0' width='100%' height='100%' className='w-[110vh] h-[80vh]'></iframe>
       </div>
      </div>
     );
