@@ -1,93 +1,105 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { div } from 'framer-motion/client';
+import { div } from "framer-motion/client";
+import RepoCard from "./ui/RepoCard";
 
 function Github() {
-
-  const [data,setData] = useState([])
-  useEffect(()=>{
-     fetch('https://api.github.com/users/arijitroy667')
-     .then(response=>response.json())
-     .then(data=> {
-      setData(data)
-    })
-  },[])
-
-  const [repo,setRepo] = useState([])
-  useEffect(()=>{
-     fetch('https://api.github.com/users/arijitroy667/repos')
-     .then(response=>response.json())
-     .then(repo=> {
-      setRepo(repo)
-    })
-  },[])
-
-   console.log(repo[1]);
-  
+  const repos = [
+    {
+      name: "Vaultopia",
+      url: "https://github.com/arijitroy667/Vaultopia",
+      readme: "https://github.com/arijitroy667/Vaultopia/blob/master/README.md",
+      tech: ["Solidity", "Ethers v6", "Next.js", "TailwindCSS", "Lido API"],
+      stars: 15,
+      bg: "from-purple-500 to-indigo-600",
+    },
+    {
+      name: "Nebula DAO",
+      url: "https://github.com/arijitroy667/NebulaDAO",
+      readme: "https://github.com/arijitroy667/NebulaDAO/blob/master/readme.md",
+      tech: ["Solidity", "Ethers v6", "React.js", "TailwindCSS", "ERC20 Votes"],
+      stars: 12,
+      bg: "from-blue-600 to-cyan-500",
+    },
+    {
+      name: "USDC Holesky Faucet",
+      url: "https://github.com/arijitroy667/USDC_Holesky",
+      readme:
+        "https://github.com/arijitroy667/USDC_Holesky/blob/master/README.md",
+      tech: ["Solidity", "Ethers v6", "React.js", "TailwindCSS"],
+      stars: 12,
+      bg: "from-green-500 to-emerald-600",
+    },
+    {
+      name: "Uniswap V2 forked",
+      url: "https://github.com/arijitroy667/Uniswap-Holesky",
+      readme:
+        "https://github.com/arijitroy667/Uniswap-Holesky/blob/master/README.md",
+      tech: ["Solidity", "Ethers v6", "React.js", "TailwindCSS"],
+      stars: 10,
+      bg: "from-pink-500 to-rose-500",
+    },
+    {
+      name: "Dimensia token",
+      url: "https://github.com/arijitroy667/Dimensia_token",
+      readme:
+        "https://github.com/arijitroy667/Dimensia_token/blob/master/README.md",
+      tech: ["Solidity", "Ethers v6", "React.js", "TailwindCSS"],
+      stars: 10,
+      bg: "from-yellow-500 to-orange-500",
+    },
+    {
+      name: "My Portfolio",
+      url: "https://github.com/arijitroy667/My_Portfolio",
+      readme:
+        "https://github.com/arijitroy667/My_Portfolio/blob/master/README.md",
+      tech: ["React.js", "React Router", "TailwindCSS"],
+      stars: 10,
+      bg: "from-gray-700 to-gray-900",
+    },
+    {
+      name: "Password generator",
+      url: "https://github.com/arijitroy667/Password_Generater",
+      readme:
+        "https://github.com/arijitroy667/Password_Generater/blob/master/README.md",
+      tech: ["JavaScript", "React.js", "TailwindCSS"],
+      stars: 10,
+      bg: "from-red-500 to-pink-500",
+    },
+  ];
 
   return (
-    // <div className='bg-gray-950 min-h-screen text-white'>
-    //   <div>
-    //     <img src={data.avatar_url} alt="" />
-    //     <h1>Username: {data.login}</h1>
-    //     <h2><Link to={data.html_url}>Link to my Github</Link></h2>
-    //   </div>
-    //   <div>
-    //     <h1>My Repositories</h1>
-    //     <div className="flex justify-center">
-    //     <motion.div 
-    //       className="w-full max-w-lg bg-gray-900 text-white shadow-lg rounded-2xl overflow-hidden p-6 border border-teal-500"
-    //       whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px limegreen" }}
-    //       whileTap={{ scale: 0.95 }}
-    //     >
-    //       <motion.h2 
-    //         className="text-2xl font-semibold text-teal-400"
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ duration: 0.5 }}
-    //       >
-    //         {repo[1].name}
-    //       </motion.h2>
-    //       <p className="text-gray-400"><Link to='https://github.com/arijitroy667/My_Portfolio'>Click to visit</Link></p>
-    //       <p className="text-gray-400">🏆 Type: Web2.0</p>
-    //       <ul className="mt-3 list-disc list-inside text-gray-300">
-    //         <li>🔥 {repo[1].description}</li>
-    //         <li>🌐 Commits: 10+</li>
-    //         <li>💻 Tech stack: {repo[1].language}</li>
-    //       </ul>
-    //     </motion.div>
-    //     </div>
-    //     <div className="flex justify-center">
-    //     <motion.div 
-    //       className="w-full max-w-lg bg-gray-900 text-white shadow-lg rounded-2xl overflow-hidden p-6 border border-teal-500"
-    //       whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px limegreen" }}
-    //       whileTap={{ scale: 0.95 }}
-    //     >
-    //       <motion.h2 
-    //         className="text-2xl font-semibold text-teal-400"
-    //         initial={{ opacity: 0, y: 20 }}
-    //         animate={{ opacity: 1, y: 0 }}
-    //         transition={{ duration: 0.5 }}
-    //       >
-    //         {repo[0].name}
-    //       </motion.h2>
-    //       <p className="text-gray-400"><Link to='https://github.com/arijitroy667/my_First_Smart_Contract'>Click to visit</Link></p>
-    //       <p className="text-gray-400">🏆 Type: Web3.0</p>
-    //       <ul className="mt-3 list-disc list-inside text-gray-300">
-    //         <li>🔥 {repo[0].description}</li>
-    //         <li>🌐 Chain: Ethereum Sepolia</li>
-    //         <li>💻 Tech stack: {repo[0].language}</li>
-    //       </ul>
-    //     </motion.div>
-    //     </div>
-    //   </div>
-    // </div>
-    <div className='flex justify-center items-center h-screen bg-gray-950 text-white'>
-      Currently Under Progress
+    <div className="min-h-screen bg-black p-10 text-white">
+      <h1 className="mt-15 text-4xl font-bold text-center mb-12">
+        <motion.h2
+                className="text-5xl font-extrabold mb-8 pb-3 text-center bg-gradient-to-r from-emerald-200 to-cyan-400 text-transparent bg-clip-text"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1 }}
+              >
+                My Github Projects 🚀
+              </motion.h2>
+      </h1>
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {repos.map((repo, index) => (
+          <div
+            key={index}
+            className={`rounded-2xl bg-gradient-to-br ${repo.bg} p-1`}
+          >
+            <RepoCard
+              repoName={repo.name}
+              repoUrl={repo.url}
+              readmeUrl={repo.readme}
+              techStack={repo.tech}
+              stars={repo.stars}
+            />
+          </div>
+        ))}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Github
+export default Github;
