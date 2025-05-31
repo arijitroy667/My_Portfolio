@@ -24,10 +24,10 @@ function Github() {
       bg: "from-blue-600 to-cyan-500",
     },
     {
-      name: "USDC Holesky Faucet",
-      url: "https://github.com/arijitroy667/USDC_Holesky",
+      name: "USDC Hoodi Faucet",
+      url: "https://github.com/arijitroy667/USDC_Hoodi",
       readme:
-        "https://github.com/arijitroy667/USDC_Holesky/blob/master/README.md",
+        "https://github.com/arijitroy667/USDC_Hoodi/blob/master/README.md",
       tech: ["Solidity", "Ethers v6", "React.js", "TailwindCSS"],
       stars: 12,
       bg: "from-green-500 to-emerald-600",
