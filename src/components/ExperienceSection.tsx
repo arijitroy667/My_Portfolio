@@ -39,7 +39,7 @@ const ExperienceSection: React.FC = () => {
 
   const education = [
     {
-      degree: "Bachelor of Science in Electronics and Communications ",
+      degree: "Bachelor of Technology in Electronics and Communications ",
       school: "The LNMIIT",
       period: "2024 - present",
       description: "Learning electronics and web 3.0",
