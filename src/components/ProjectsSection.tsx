@@ -68,8 +68,8 @@ const ProjectsSection: React.FC = () => {
       image: "/Portfolio.png",
       technologies: ["React", "Three.js", "Framer Motion", "Tailwind"],
       category: "Frontend",
-      github: "#",
-      demo: "#",
+      github: "https://github.com/arijitroy667/My_Portfolio/",
+      demo: "https://portfolio-arijitroy.vercel.app/",
     },
     {
       title: "Password Generator",
