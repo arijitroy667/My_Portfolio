@@ -813,7 +813,7 @@ const HeroSection: React.FC = () => {
             <motion.button
               onClick={() => {
                 window.open(
-                  "https://drive.google.com/file/d/1-meqSApDLE_Qe6qI4XFrJkFETzOFaWN3/view?usp=drive_link"
+                  "https://drive.google.com/file/d/1MU4iop_lFdgGDnLT75HuNgjIWwgL0dpf/view?usp=sharing"
                 );
               }}
               whileHover={{ scale: 1.05 }}
