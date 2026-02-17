@@ -11,27 +11,26 @@ const ExperienceSection: React.FC = () => {
 
   const experiences = [
     {
-      title: "Full Stack Developer",
-      company: "Chromion Hackathon",
-      period: "June 2025",
-      description: "Team Lead for TangibleFi",
+      title: "Fullstack Developer",
+      company: "ETH Global New Delhi",
+      period: "Sept 2025",
+      description:
+        "Built a fullstack application for invoice tokenization at the ETH Global hackathon.",
       achievements: [
-        "Tokenized Real-World-Assets into NFTs",
-        "Multitoken loan repayment taken cross-chain (via CCIP)",
-        "Automated loan repayments using Chainlink Automation",
+        "Developed invoice tokenization app integrating PayPal USD",
+        "Built marketplace for suppliers to get instant liquidity via tokenized invoices",
       ],
       logo: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=100",
     },
     {
-      title: "Full Stack Developer",
-      company: "LNMHacks 7.0",
-      period: "Jan 2025",
+      title: "Fullstack Developer",
+      company: "Chainlink Chromion",
+      period: "May 2025",
       description:
-        "Developed a decentralized application for chess enthusiasts",
+        "Built a lending/borrowing platform during the Chainlink Chromion hackathon.",
       achievements: [
-        "Dual chess betting onchain",
-        "Purely based on skills and confidence",
-        "Deployed on Aptos testnet using Move",
+        "Developed JWT-secured fullstack architecture for lending/borrowing",
+        "Designed automated backend for EMI collection and protocol integrations",
       ],
       logo: "https://images.pexels.com/photos/5849580/pexels-photo-5849580.jpeg?auto=compress&cs=tinysrgb&w=100",
     },
@@ -39,10 +38,11 @@ const ExperienceSection: React.FC = () => {
 
   const education = [
     {
-      degree: "Bachelor of Technology in Electronics and Communications ",
-      school: "The LNMIIT",
-      period: "2024 - present",
-      description: "Learning electronics and web 3.0",
+      degree: "Bachelor of Technology in Electronics and Communications",
+      school: "The LNM Institute of Information Technology",
+      period: "2024 - Present",
+      description:
+        "Exploring fullstack engineering, generative AI, and systems design.",
     },
   ];
 
@@ -163,7 +163,7 @@ const ExperienceSection: React.FC = () => {
               ))}
             </div>
 
-            {/* Skills Chart */}
+            {/* Core Technologies */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -176,13 +176,13 @@ const ExperienceSection: React.FC = () => {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   "React/Next.js",
-                  "Node.js/Express",
+                  "Python/FastAPI",
                   "TypeScript",
-                  "Solidity",
+                  "LangChain/LangGraph",
+                  "Node.js/Express",
+                  "MongoDB/Redis",
                   "Docker",
-                  "MongoDB",
-                  "PostgreSQL",
-                  "Rust",
+                  "Vector Databases",
                 ].map((tech, index) => (
                   <motion.div
                     key={tech}

@@ -7,7 +7,7 @@ import {
   Github,
   Twitter,
   Linkedin,
-  TerminalSquare,
+  Brain,
   Zap,
 } from "lucide-react";
 
@@ -18,29 +18,10 @@ const AboutSection: React.FC = () => {
   });
 
   const skills = [
-    { name: "Frontend Development", level: 95, icon: Code },
-    { name: "Backend Development", level: 90, icon: Zap },
-    { name: "Foundry & Ether.js", level: 80, icon: TerminalSquare },
+    { name: "Fullstack Development", level: 95, icon: Code },
+    { name: "Generative AI & LLMs", level: 90, icon: Brain },
+    { name: "Agent Orchestration", level: 85, icon: Zap },
     { name: "Project Management", level: 88, icon: Award },
-  ];
-
-  const achievements = [
-    // {
-    //   title: "Top Performer Award",
-    //   description:
-    //     "Recognized for outstanding contribution to product development",
-    //   year: "2023",
-    // },
-    // {
-    //   title: "Open Source Contributor",
-    //   description: "Active contributor to major React and Node.js projects",
-    //   year: "2022",
-    // },
-    // {
-    //   title: "Tech Conference Speaker",
-    //   description: "Presented at React Conference on modern web architecture",
-    //   year: "2023",
-    // },
   ];
 
   return (
@@ -57,9 +38,8 @@ const AboutSection: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Passionate developer with 1+ years of experience crafting digital
-            solutions that make a difference. I bridge the gap between
-            real-world and onchain entities.
+            Fullstack + Gen AI engineer with hands-on hackathon experience and a
+            drive to build production-grade systems.
           </p>
         </motion.div>
 
@@ -83,7 +63,7 @@ const AboutSection: React.FC = () => {
                     whileHover={{ scale: 1.1 }}
                   />
 
-                  {/* Social icons that appear on hover with enhanced animation */}
+                  {/* Social icons that appear on hover */}
                   <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                     <motion.a
                       href="https://github.com/arijitroy667"
@@ -118,7 +98,7 @@ const AboutSection: React.FC = () => {
                       <Linkedin size={20} />
                     </motion.a>
                     <motion.a
-                      href="https://x.com/ARIJITROY115058/status/1895836210834391091"
+                      href="https://x.com/ARIJITROY115058"
                       target="_blank"
                       rel="noopener noreferrer"
                       initial={{ scale: 0, rotate: -20 }}
@@ -164,14 +144,16 @@ const AboutSection: React.FC = () => {
           >
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                I'm a full-stack developer based in Jaipur, India, specializing
-                in Defi. My journey began with Cipher club from LNMIIT, and I've
-                since worked on my personal projects and several hackathons.
+                I'm a fullstack + generative AI engineer based in Jaipur, India,
+                currently pursuing B.Tech at LNMIIT. I build multi-agent
+                reasoning systems, scalable backends, and polished React/Next.js
+                frontends — with a foundation in blockchain development.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge
-                through technical articles.
+                I've competed at ETH Global, Chainlink Chromion, and LNMHacks,
+                and I write about DeFi protocols and AI architectures on Medium.
+                I love turning complex problems into elegant, production-ready
+                solutions.
               </p>
             </div>
 
@@ -211,31 +193,6 @@ const AboutSection: React.FC = () => {
             </div>
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid md:grid-cols-3 gap-8"
-        >
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={achievement.title}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
-            >
-              <div className="text-primary-600 dark:text-primary-400 text-sm font-medium mb-2">
-                {achievement.year}
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                {achievement.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                {achievement.description}
-              </p>
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );
