@@ -1,214 +1,201 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Star, Award, Code, Rocket, Users, Trophy } from "lucide-react";
+import { Star, Award, Code, Rocket, Users } from "lucide-react";
+
+const milestones = [
+  {
+    year: "June 2026",
+    title: "Summer intern @ TATA STEEL LTD",
+    description: "Working on a project to streamline data acquisition and automate industrial processes.",
+    icon: Code,
+    color: "from-emerald-500 to-teal-400",
+    glow: "rgba(16,185,129,0.4)",
+    achievements: ["Developed SKADA system"],
+  },
+  {
+    year: "June 2026",
+    title: "Google Rapid Agent Hackathon",
+    description: "Developed Bulwark — the GitLab pre-merge gate.",
+    icon: Award,
+    color: "from-primary-500 to-secondary-400",
+    glow: "rgba(124,58,237,0.4)",
+    achievements: [
+      "Checks every MR opened",
+      "Spins up ephemeral dev environment",
+      "Blocks until CI/CD pipeline passes",
+    ],
+  },
+  {
+    year: "May 2026",
+    title: "Meta × OpenEnv × PyTorch Hackathon",
+    description: "Engineered warehouse environment using AI to automate RL model testing.",
+    icon: Rocket,
+    color: "from-blue-500 to-indigo-400",
+    glow: "rgba(59,130,246,0.4)",
+    achievements: [
+      "Built OpenEnv-compliant RL environment",
+      "Training RL policies using PyTorch & Huggingface",
+      "Future integration to improve efficiency",
+    ],
+  },
+  {
+    year: "Jan 2026",
+    title: "LNMHacks 8.0",
+    description: "Organized 600+ devs, networking with sponsors, managing logistics",
+    icon: Star,
+    color: "from-pink-500 to-rose-400",
+    glow: "rgba(236,72,153,0.4)",
+    achievements: [
+      "Developed Courtney AI",
+      "Beats LLM hallucinations via agent reasoning",
+      "Won 2nd place — x402 Agentic track",
+    ],
+  },
+  {
+    year: "2024",
+    title: "Member of Cipher Club",
+    description: "Joined a community of top developers and tech enthusiasts. Engaged in exclusive workshops and networking events.",
+    icon: Users,
+    color: "from-purple-500 to-violet-400",
+    glow: "rgba(139,92,246,0.4)",
+    achievements: [
+      "Organized 2 hands-on workshops on ERC-20 tokens",
+      "Organized Roastathon with senior developers",
+      "Learnt blockchain basics to Foundry development @EVM",
+    ],
+  },
+];
+
+const stats = [
+  { number: "25+",   label: "Projects Completed",    accent: "from-primary-500 to-secondary-400" },
+  { number: "2.5+",  label: "Years Experience",       accent: "from-emerald-500 to-teal-400" },
+  { number: "300+",  label: "GitHub Contributions",   accent: "from-pink-500 to-rose-400" },
+  { number: "1000+", label: "Article Views",          accent: "from-amber-500 to-orange-400" },
+];
 
 const JourneySection: React.FC = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
-  const milestones = [
-    {
-      year: "June 2026",
-      title: "Summer intern @ TATA STEEL LTD",
-      description:
-        "Working on a project to streamline data acquisition and automate industrial processes.",
-      icon: Code,
-      color: "from-green-500 to-blue-500",
-      achievements: ["Developed SKADA system"],
-    },
-    {
-      year: "June 2026",
-      title: "Google Rapid agent Hackathon",
-      description:
-        "Developed Bulwark the Gitlab pre-merge gate.",
-      icon: Award,
-      color: "from-indigo-500 to-purple-500",
-      achievements: [
-        "Checks every MR opened",
-        "Spins up an ephemeral dev environment",
-        "Blocks until CI/CD pipeline passes",
-      ],
-    },
-    {
-      year: "May 2026",
-      title: "Meta X Openenv X Pytorch Hackathon",
-      description:
-        "Engineered warehouse environment using AI to automate the process of testing the ML models",
-      icon: Rocket,
-      color: "from-blue-500 to-indigo-500",
-      achievements: [
-        "Built Openenv compliant RL environment",
-        "Training RL policies using PyTorch, Huggingface",
-        "Future-Integration to improve efficiency",
-      ],
-    },
-    {
-      year: "Jan 2026",
-      title: "LNMHacks 8.0",
-      description:
-        "Organized and managed 600+ devs, networking with sponsors, managing logistics",
-      icon: Star,
-      color: "from-pink-500 to-red-500",
-      achievements: [
-        "Developed Courtney AI",
-        "Beats LLM hallucinations by agent's reasoning",
-        "Won 2nd place - x402 Agentic track",
-      ],
-    },
-    {
-      year: "2024",
-      title: "Member of Cipher club",
-      description:
-        "Joined the Cipher club, a community of top developers and tech enthusiasts. Engaged in exclusive workshops and networking events.",
-      icon: Users,
-      color: "from-purple-500 to-pink-500",
-      achievements: [
-        "Organized 2 Hands-on workshops on ERC-20 tokens",
-        "Organized Roastathon event with senior developers",
-        "Learnt blockchain basics to foundry development @EVM",
-      ],
-    },
-  ];
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
 
   return (
-    <section id="journey" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="journey" className="py-24 bg-gray-50/80 dark:bg-charcoal-800 relative overflow-hidden">
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-primary-100 dark:bg-primary-900/10 blur-3xl pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Header */}
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7 }}
+          className="mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My Journey
+          <div className="section-overline">05 &nbsp;Journey</div>
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white">
+            My Milestones
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Key milestones and achievements that have shaped my career and
-            passion for technology
+          <p className="mt-3 text-lg text-gray-500 dark:text-charcoal-200 font-light">
+            Key moments that shaped my path in tech
           </p>
         </motion.div>
 
+        {/* Timeline */}
         <div className="relative">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-primary-400 to-secondary-400" />
+          {/* Glowing center line */}
+          <div className="hidden md:block absolute left-1/2 -translate-x-px top-0 bottom-0 w-px bg-gradient-to-b from-primary-400 via-secondary-400 via-pink-400 to-transparent" />
 
           <div className="space-y-12">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, y: 50 }}
-                animate={inView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                }`}
-              >
-                {/* Timeline Node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                  <motion.div
-                    whileHover={{ scale: 1.2 }}
-                    className={`w-16 h-16 rounded-full bg-gradient-to-r ${milestone.color} p-0.5`}
-                  >
-                    <div className="w-full h-full rounded-full bg-white dark:bg-gray-900 flex items-center justify-center">
-                      <milestone.icon
-                        size={24}
-                        className="text-gray-700 dark:text-gray-300"
-                      />
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Content Card */}
+            {milestones.map((m, index) => {
+              const isLeft = index % 2 === 0;
+              return (
                 <motion.div
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className={`w-5/12 ${
-                    index % 2 === 0 ? "pr-8 text-right" : "pl-8 text-left"
-                  }`}
+                  key={m.year + m.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  className={`relative flex items-center ${isLeft ? "flex-row" : "flex-row-reverse"} gap-0`}
                 >
-                  <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-                    <div
-                      className={`${
-                        index % 2 === 0 ? "text-right" : "text-left"
-                      }`}
+                  {/* Glowing node */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-10 items-center justify-center">
+                    <motion.div
+                      whileHover={{ scale: 1.2 }}
+                      className={`w-14 h-14 rounded-full bg-gradient-to-br ${m.color} p-0.5`}
+                      style={{ boxShadow: `0 0 20px ${m.glow}` }}
                     >
-                      <span
-                        className={`inline-block px-3 py-1 bg-gradient-to-r ${milestone.color} text-white text-sm font-bold rounded-full mb-3`}
-                      >
-                        {milestone.year}
+                      <div className="w-full h-full rounded-full bg-white dark:bg-charcoal-800 flex items-center justify-center">
+                        <m.icon size={22} className="text-gray-700 dark:text-gray-300" />
+                      </div>
+                    </motion.div>
+                  </div>
+
+                  {/* Card */}
+                  <motion.div
+                    whileHover={{ scale: 1.02, y: -4 }}
+                    className={`w-full md:w-5/12 ${isLeft ? "md:pr-12" : "md:pl-12"}`}
+                  >
+                    <div className="glass-card rounded-2xl p-6 relative overflow-hidden">
+                      {/* Gradient accent top line */}
+                      <div className={`h-0.5 rounded-full bg-gradient-to-r ${m.color} mb-5`} />
+
+                      {/* Mobile: show icon inline */}
+                      <div className="md:hidden flex items-center gap-3 mb-4">
+                        <div className={`w-10 h-10 rounded-full bg-gradient-to-br ${m.color} flex items-center justify-center flex-shrink-0`}>
+                          <m.icon size={18} className="text-white" />
+                        </div>
+                        <span className="font-mono text-xs text-gray-400 dark:text-charcoal-300">{m.year}</span>
+                      </div>
+
+                      <span className={`hidden md:inline-block text-xs font-mono px-3 py-1 rounded-full bg-gradient-to-r ${m.color} text-white mb-3`}>
+                        {m.year}
                       </span>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                        {milestone.title}
+
+                      <h3 className="font-display font-bold text-gray-900 dark:text-white text-lg mb-2 leading-snug">
+                        {m.title}
                       </h3>
-                      <p className="text-gray-600 dark:text-gray-300 mb-4">
-                        {milestone.description}
+                      <p className="text-sm text-gray-500 dark:text-charcoal-200 mb-4 leading-relaxed">
+                        {m.description}
                       </p>
 
-                      <div className="space-y-2">
-                        {milestone.achievements.map((achievement, idx) => (
-                          <motion.div
-                            key={idx}
-                            initial={{
-                              opacity: 0,
-                              x: index % 2 === 0 ? 20 : -20,
-                            }}
-                            animate={inView ? { opacity: 1, x: 0 } : {}}
-                            transition={{
-                              duration: 0.4,
-                              delay: index * 0.2 + idx * 0.1 + 0.5,
-                            }}
-                            className={`flex items-center gap-2 ${
-                              index % 2 === 0 ? "justify-end" : "justify-start"
-                            }`}
-                          >
-                            <span className="w-1.5 h-1.5 bg-primary-500 rounded-full" />
-                            <span className="text-sm text-gray-600 dark:text-gray-300">
-                              {achievement}
-                            </span>
-                          </motion.div>
+                      <ul className="space-y-1.5">
+                        {m.achievements.map((a, idx) => (
+                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-500 dark:text-charcoal-300">
+                            <span className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 bg-gradient-to-r ${m.color}`} />
+                            {a}
+                          </li>
                         ))}
-                      </div>
+                      </ul>
                     </div>
-                  </div>
-                </motion.div>
+                  </motion.div>
 
-                {/* Empty space for opposite side */}
-                <div className="w-5/12" />
-              </motion.div>
-            ))}
+                  {/* Spacer */}
+                  <div className="hidden md:block w-5/12" />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
-        {/* Stats Section */}
+        {/* Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
+          transition={{ duration: 0.7, delay: 1.0 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20"
         >
-          {[
-            { number: "25+", label: "Projects Completed" },
-            { number: "2.5+", label: "Years Experience" },
-            { number: "300+", label: "GitHub Contributions" },
-            { number: "1000+", label: "Article Views" },
-          ].map((stat, index) => (
+          {stats.map((s, i) => (
             <motion.div
-              key={stat.label}
-              initial={{ scale: 0 }}
-              animate={inView ? { scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 1.4 + index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-              className="text-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg"
+              key={s.label}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={inView ? { scale: 1, opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 1.2 + i * 0.1 }}
+              whileHover={{ y: -4, scale: 1.03 }}
+              className="glass-card rounded-2xl p-6 text-center"
             >
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                {stat.number}
+              <div className={`font-display text-4xl font-extrabold bg-gradient-to-r ${s.accent} bg-clip-text text-transparent mb-1`}>
+                {s.number}
               </div>
-              <div className="text-gray-600 dark:text-gray-300 font-medium">
-                {stat.label}
-              </div>
+              <div className="text-sm text-gray-500 dark:text-charcoal-200 font-light">{s.label}</div>
             </motion.div>
           ))}
         </motion.div>
