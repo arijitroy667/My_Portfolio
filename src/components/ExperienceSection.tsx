@@ -11,26 +11,26 @@ const ExperienceSection: React.FC = () => {
 
   const experiences = [
     {
-      title: "Fullstack Developer",
-      company: "ETH Global New Delhi",
-      period: "Sept 2025",
+      title: "Summer intern",
+      company: "TATA STEEL LTD",
+      period: "June 2026",
       description:
-        "Built a fullstack application for invoice tokenization at the ETH Global hackathon.",
+        "Industrial automation & Data acquisition systems intern",
       achievements: [
-        "Developed invoice tokenization app integrating PayPal USD",
-        "Built marketplace for suppliers to get instant liquidity via tokenized invoices",
+        "Built practical understanding of automation workflows, data acquisition pipelines",
+        "Gained exposure to operational technology and industrial data management",
       ],
       logo: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=100",
     },
     {
       title: "Fullstack Developer",
-      company: "Chainlink Chromion",
-      period: "May 2025",
+      company: "Google Cloud Rapid Agent Hackathon",
+      period: "June 2026",
       description:
-        "Built a lending/borrowing platform during the Chainlink Chromion hackathon.",
+        "Developed Bulwark, an automated pre-deployment testing gate",
       achievements: [
-        "Developed JWT-secured fullstack architecture for lending/borrowing",
-        "Designed automated backend for EMI collection and protocol integrations",
+        "Automated pre-merge gate that tests every GitLab Merge Request against real production conditions",
+        "Catches infrastructure regressions and LLM hallucinations before deployment",
       ],
       logo: "https://images.pexels.com/photos/5849580/pexels-photo-5849580.jpeg?auto=compress&cs=tinysrgb&w=100",
     },
@@ -178,8 +178,8 @@ const ExperienceSection: React.FC = () => {
                   "React/Next.js",
                   "Python/FastAPI",
                   "TypeScript",
-                  "LangChain/LangGraph",
-                  "Node.js/Express",
+                  "AWS",
+                  "Golang",
                   "MongoDB/Redis",
                   "Docker",
                   "Vector Databases",

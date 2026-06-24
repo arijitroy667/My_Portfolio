@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
     { name: "Fullstack Development", level: 95, icon: Code },
     { name: "Generative AI & LLMs", level: 90, icon: Brain },
     { name: "Agent Orchestration", level: 85, icon: Zap },
-    { name: "Project Management", level: 88, icon: Award },
+    { name: "Devops & Cloud Computing", level: 88, icon: Award },
   ];
 
   return (
@@ -38,8 +38,7 @@ const AboutSection: React.FC = () => {
             About Me
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Fullstack + Gen AI engineer with hands-on hackathon experience and a
-            drive to build production-grade systems.
+            Software Engineer shipping resilient, production-grade GenAI and backend infrastructure.
           </p>
         </motion.div>
 
@@ -52,12 +51,12 @@ const AboutSection: React.FC = () => {
           >
             <div className="relative w-full max-w-md mx-auto">
               {/* Circular gradient border frame with hover animation */}
-              <div className="p-2 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-full shadow-xl aspect-square max-w-sm mx-auto hover:shadow-2xl transition-all duration-300 group">
+              <div className="p-2 bg-primary-600 rounded-full shadow-xl aspect-square max-w-sm mx-auto hover:shadow-2xl transition-all duration-300 group">
                 {/* Circular image container */}
                 <div className="relative overflow-hidden rounded-full bg-white w-full h-full">
                   {/* Image with scale effect */}
                   <motion.img
-                    src="/ArijitRoyImg.jpg"
+                    src="/ArijitRoyImg.png"
                     alt="Arijit Roy"
                     className="w-full h-full object-cover object-center transition-all duration-500 group-hover:brightness-50"
                     whileHover={{ scale: 1.1 }}
@@ -144,16 +143,16 @@ const AboutSection: React.FC = () => {
           >
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                I'm a fullstack + generative AI engineer based in Jaipur, India,
-                currently pursuing B.Tech at LNMIIT. I build multi-agent
-                reasoning systems, scalable backends, and polished React/Next.js
-                frontends — with a foundation in blockchain development.
+                I am a Full-Stack & GenAI Engineer bridging the gap between 
+                autonomous AI, scalable backends, and advanced Web3 protocols. 
+                Currently a BTech student at LNMIIT and an intern at Tata Steel.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                I've competed at ETH Global, Chainlink Chromion, and LNMHacks,
-                and I write about DeFi protocols and AI architectures on Medium.
-                I love turning complex problems into elegant, production-ready
-                solutions.
+                I build production-grade multi-agent systems and verifiable DeFi 
+                infrastructure. I am a frequent builder at global events—including 
+                the Meta-PyTorch OpenEnv and Google Cloud hackathons—and a technical 
+                writer covering the intersection of AI and blockchain. My core drive is 
+                turning complex architectural challenges into resilient, high-impact products.
               </p>
             </div>
 
@@ -185,7 +184,7 @@ const AboutSection: React.FC = () => {
                       initial={{ width: 0 }}
                       animate={inView ? { width: `${skill.level}%` } : {}}
                       transition={{ duration: 1, delay: 0.8 + index * 0.1 }}
-                      className="bg-gradient-to-r from-primary-500 to-secondary-500 h-2 rounded-full"
+                      className="bg-primary-600 h-2 rounded-full"
                     />
                   </div>
                 </motion.div>

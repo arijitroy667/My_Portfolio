@@ -13,92 +13,16 @@ const ArticlesSection: React.FC = () => {
 
   const articles = [
     {
-      title: "Ethereum V/S Bitcoin: A Comprehensive Comparison",
+      title: "The Trillion-Dollar Irony: How the Jevons Paradox is Quietly Breaking the AI Economy",
       excerpt:
-        "Dive deep into the differences, similarities, and unique features of Ethereum and Bitcoin.",
-      image: "/BTC_ETH.jpg",
+        "Why the AI boom is heading for a cliff: Unpacking the Jevons Paradox and the brutal physics of compute.",
+      image: "/Jevons_Paradox.png",
       category: "General",
-      readTime: "2 min read",
-      date: "Oct 26, 2024",
-      link: "https://medium.com/@arijitroy0445/ethereum-vs-bitcoin-0df6323b6826",
-      tags: ["BTC", "ETH", "Ecosystem"],
-    },
-    {
-      title: "Reliance Jio partners with Polygon",
-      excerpt:
-        "Reliance Jio Platforms Limited (JPL), a subsidiary of Reliance Industries Limited, has entered into a strategic partnership with Polygon Labs",
-      image: "/Reliance.jpg",
-      category: "News",
-      readTime: "2 min read",
-      date: "Jan 16, 2025",
-      link: "https://medium.com/@arijitroy0445/reliance-jio-partners-with-polygon-to-enable-web-3-0-in-india-63714a592118",
-      tags: ["Web 3.0", "Trends", "Polygon"],
-    },
-    {
-      title: "Layers 2 Blockchains",
-      excerpt:
-        "An overview of Layer 2 blockchains and their role in the Ethereum ecosystem.",
-      image: "/Layer2.jpg",
-      category: "General",
-      readTime: "2 min read",
-      date: "Jan 14, 2025",
-      link: "https://medium.com/@arijitroy0445/layers-2-blockchains-59a02528ccb9",
-      tags: ["Layer 2", "Blockchain Trilemma", "ZKs"],
-    },
-    {
-      title: "ERC-20 Token : A revolutionary token standard",
-      excerpt:
-        "ERC-20 Tokens: The Building Blocks of Ethereum’s Digital Economy.",
-      image: "/ERC20.jpg",
-      category: "ERCs",
-      readTime: "5 min read",
-      date: "Mar 15, 2025",
-      link: "https://medium.com/@arijitroy0445/erc-20-token-a-revolutionary-token-standard-8e1be7de8bbb",
-      tags: ["ERC-20", "Solidity", "Smart Contracts"],
-    },
-    {
-      title: "ERC-223: A Smarter Upgrade to ERC-20",
-      excerpt: "ERC-223 Tokens: The Next Step in Ethereum’s Token Evolution.",
-      image: "/ERC223.jpg",
-      category: "ERCs",
-      readTime: "3 min read",
-      date: "Mar 17, 2025",
-      link: "https://medium.com/@arijitroy0445/erc-223-a-smarter-upgrade-to-erc-20-0dd2f70be4f2",
-      tags: ["ERC-20", "ERC-223", "Solidity", "Smart Contracts"],
-    },
-    {
-      title: "ERC-4626 : “The story of Tokenized Vaults”",
-      excerpt: "ERC-4626 Tokens: The Future of Tokenized Vaults in DeFi.",
-      image: "/ERC4626.jpg",
-      category: "ERCs",
-      readTime: "4 min read",
-      date: "Mar 19, 2025",
-      link: "https://medium.com/@arijitroy0445/erc-4626-the-story-of-tokenized-vaults-1339c6310752",
-      tags: ["ERC-4626", "Vaults", "Solidity", "Smart Contracts"],
-    },
-    {
-      title:
-        "ERC-7575: Solving ERC-4626’s Limitations and Unlocking Investment Diversification",
-      excerpt:
-        "ERC-7575 Tokens: Enhancing the Functionality of Tokenized Vaults.",
-      image: "/ERC7575.jpg",
-      category: "ERCs",
-      readTime: "4 min read",
-      date: "Mar 24, 2025",
-      link: "https://medium.com/@arijitroy0445/erc-7575-solving-erc-4626s-limitations-and-unlocking-investment-diversification-d76f1714b2ab",
-      tags: ["ERC-7575", "Multi-token Vaults", "Solidity", "Smart Contracts"],
-    },
-    {
-      title: "ERC-2535: The Diamond Standard",
-      excerpt:
-        "ERC-2535 Tokens: The Diamond Standard for Smart Contract Organization.",
-      image: "/ERC2535.jpg",
-      category: "ERCs",
-      readTime: "3 min read",
-      date: "Apr 14, 2025",
-      link: "https://medium.com/@arijitroy0445/erc-2535-the-diamond-standard-fc1e59c40437",
-      tags: ["ERC-2535", "Diamond Standard", "Solidity", "Smart Contracts"],
-    },
+      readTime: "7 min read",
+      date: "May 28, 2026",
+      link: "https://medium.com/@arijitroy0445/the-trillion-dollar-irony-how-the-jevons-paradox-is-quietly-breaking-the-ai-economy-922a28ce009a",
+      tags: ["Jevons Paradox", "AI", "Economy"],
+    },   
     {
       title: "Order book DEXs V/S Automated market makers(AMMs)",
       excerpt:
@@ -120,17 +44,6 @@ const ArticlesSection: React.FC = () => {
       date: "May 25, 2025",
       link: "https://medium.com/@arijitroy0445/faq-amms-and-dex-mechanisms-4ac91d0d23b4",
       tags: ["MEV attacks", "AMM", "DeFi", "Exchanges"],
-    },
-    {
-      title: "Vaultopia: Advanced Yield Generation Vault",
-      excerpt:
-        "Vaultopia represents a groundbreaking approach to decentralized yield generation, built as a minimum viable product (MVP) that demonstrates the potential of sophisticated DeFi protocols.",
-      image: "/Vaultopia_docs.jpg",
-      category: "De-fi",
-      readTime: "10 min read",
-      date: "May 29, 2025",
-      link: "https://medium.com/@arijitroy0445/vaultopia-advanced-yield-generation-vault-f881410d49c2",
-      tags: ["USDC", "Lido", "DeFi", "Vault", "Yield Aggregator"],
     },
   ];
 
@@ -160,30 +73,7 @@ const ArticlesSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
-        >
-          <Filter className="text-gray-400 my-auto mr-2" size={20} />
-          {categories.map((category) => (
-            <motion.button
-              key={category}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveFilter(category)}
-              className={`px-3 py-1.5 rounded-full font-medium transition-colors text-sm ${
-                activeFilter === category
-                  ? "bg-primary-600 text-white"
-                  : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-primary-50 dark:hover:bg-gray-700"
-              }`}
-            >
-              {category}
-            </motion.button>
-          ))}
-        </motion.div>
+        
 
         {/* Articles Grid */}
         <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

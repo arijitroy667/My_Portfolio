@@ -11,51 +11,51 @@ const JourneySection: React.FC = () => {
 
   const milestones = [
     {
-      year: "Jul 2025",
-      title: "Uniswap Hook Incubator 6",
+      year: "June 2026",
+      title: "Summer intern @ TATA STEEL LTD",
       description:
-        "Selected for the Uniswap Hook Incubator 6, building a DeFi protocol on Uniswap V4.",
+        "Working on a project to streamline data acquisition and automate industrial processes.",
       icon: Code,
       color: "from-green-500 to-blue-500",
-      achievements: ["Upcoming"],
+      achievements: ["Developed SKADA system"],
     },
     {
-      year: "May 2025",
-      title: "Chainlink Chromion Hackathon",
+      year: "June 2026",
+      title: "Google Rapid agent Hackathon",
       description:
-        "Developing a RWA protocol that provides loans taking RWA as collateral.",
+        "Developed Bulwark the Gitlab pre-merge gate.",
       icon: Award,
       color: "from-indigo-500 to-purple-500",
       achievements: [
-        "Tokenized Real-World Assets",
-        "Lending with automated EMI payments setup",
-        "Built using Chainlink's CCIP and Automation",
+        "Checks every MR opened",
+        "Spins up an ephemeral dev environment",
+        "Blocks until CI/CD pipeline passes",
       ],
     },
     {
-      year: "Apr 2025",
-      title: "Vaultopia",
+      year: "May 2026",
+      title: "Meta X Openenv X Pytorch Hackathon",
       description:
-        "Developed a decentralized Vault to securely deposit USDC and generate yield via Lido V3.",
+        "Engineered warehouse environment using AI to automate the process of testing the ML models",
       icon: Rocket,
       color: "from-blue-500 to-indigo-500",
       achievements: [
-        "Built MVP in 2 months with intensive research on protocols",
-        "Testing-Deployed on Ethereum Hoodi alongwith USDC Faucet",
-        "Future-Integration with Aave and Compound to maximize yield",
+        "Built Openenv compliant RL environment",
+        "Training RL policies using PyTorch, Huggingface",
+        "Future-Integration to improve efficiency",
       ],
     },
     {
-      year: "Jan 2025",
-      title: "LNMHacks 7.0",
+      year: "Jan 2026",
+      title: "LNMHacks 8.0",
       description:
-        "Participated in my first hackathon, collaborating with a team to build a dapp in 72 hours.",
+        "Organized and managed 600+ devs, networking with sponsors, managing logistics",
       icon: Star,
       color: "from-pink-500 to-red-500",
       achievements: [
-        "Developed a decentralized Chess game",
-        "With betting and ranking system",
-        "Made with Move on Aptos chain",
+        "Developed Courtney AI",
+        "Beats LLM hallucinations by agent's reasoning",
+        "Won 2nd place - x402 Agentic track",
       ],
     },
     {
@@ -190,10 +190,10 @@ const JourneySection: React.FC = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
         >
           {[
-            { number: "10+", label: "Projects Completed" },
-            { number: "1+", label: "Years Experience" },
-            { number: "250+", label: "GitHub Contributions" },
-            { number: "80+", label: "Article Views" },
+            { number: "25+", label: "Projects Completed" },
+            { number: "2.5+", label: "Years Experience" },
+            { number: "300+", label: "GitHub Contributions" },
+            { number: "1000+", label: "Article Views" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}

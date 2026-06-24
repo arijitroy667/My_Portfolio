@@ -13,10 +13,32 @@ const ProjectsSection: React.FC = () => {
 
   const projects = [
     {
+      title: "Bulwark",
+      description:
+        "Automated pre-merge gate that tests every GitLab Merge Request against real production conditions.",
+      image: "/Bulwark.png",
+      gradient: "",
+      technologies: ["GCP", "Typescript", "Terraform", "Python", "FastAPI"],
+      category: "Full Stack",
+      github: "https://github.com/arijitroy667/Bulwark",
+      demo: "https://devpost.com/software/bulwark",
+    },
+    {
+      title: "WareHouse ENV",
+      description:
+        "AI-powered Multi-Agent RL simulation platform for dynamic warehouse logistics.",
+      image: "/warehouse.jpg",
+      gradient: "from-blue-600 to-cyan-500",
+      technologies: ["FastAPI", "Python", "LLMs", "Huggingface", "OpenEnv"],
+      category: "AI/ML",
+      github: "https://github.com/arijitroy667/Warehouse_env",
+      demo: "https://warehouse-env.vercel.app/",
+    },
+    {
       title: "Courtney AI",
       description:
         "Research-grade multi-agent reasoning framework for high-stakes AI decision workflows. Features modular agent orchestration, structured adversarial debate, and cryptographic verification of agent execution.",
-      image: "",
+      image: "/courtneyai.png",
       gradient: "from-violet-600 to-indigo-600",
       technologies: ["React", "FastAPI", "LangChain", "ZK Proofs", "Python"],
       category: "AI/ML",
@@ -24,21 +46,10 @@ const ProjectsSection: React.FC = () => {
       demo: "https://courtney-ai.vercel.app/",
     },
     {
-      title: "Polygent AI",
-      description:
-        "AI-powered market intelligence platform generating probabilistic insights from Polymarket trade data. Features FastAPI backend for market ingestion and LLM-driven reasoning for automated interpretation.",
-      image: "",
-      gradient: "from-blue-600 to-cyan-500",
-      technologies: ["FastAPI", "Python", "LLMs", "React", "Tailwind"],
-      category: "AI/ML",
-      github: "https://github.com/arijitroy667/Polygent-AI",
-      demo: "https://polygent.vercel.app/",
-    },
-    {
       title: "Sentinel",
       description:
         "Real-time DeFi protection layer built on Uniswap V4 Hooks. Detects threats via multi-agent monitoring, risk scoring, and cross-chain orchestration for automated liquidity defense.",
-      image: "",
+      image: "/sentinal.png",
       gradient: "from-emerald-600 to-teal-500",
       technologies: ["Solidity", "TypeScript", "Uniswap V4", "Node.js"],
       category: "Blockchain",
@@ -46,27 +57,28 @@ const ProjectsSection: React.FC = () => {
       demo: "",
     },
     {
+      title: "Polygent",
+      description:
+        "An advanced AI-powered analytics platform designed for Polymarket prediction markets",
+      image: "/polygent.png",
+      gradient: "from-orange-500 to-pink-500",
+      technologies: ["Next.js", "Intelligence", "x402", "Python", "FastAPI"],
+      category: "AI/ML",
+      github: "https://github.com/arijitroy667/Polygent",
+      demo: "https://polygent.vercel.app/",
+    },
+    {
       title: "Stargazer",
       description:
         "Production-grade social media platform with secure JWT authentication, cookie-based session handling, and PM2-optimized backend for improved concurrency and CPU utilization.",
-      image: "",
+      image: "/stargazer.png",
       gradient: "from-orange-500 to-pink-500",
       technologies: ["React", "Express.js", "MongoDB", "JWT", "PM2"],
       category: "Full Stack",
       github: "https://github.com/arijitroy667/Stargazer",
       demo: "https://stargazer-social.vercel.app/",
     },
-    {
-      title: "Vaultopia",
-      description:
-        "An ERC-4626 Vault to deposit USDC and earn yield through Lido Finance. Fullstack DeFi application with on-chain vault interactions.",
-      image: "/Vaultopia.png",
-      gradient: "",
-      technologies: ["React", "Next.js", "Ether.js", "Solidity", "Tailwind"],
-      category: "Blockchain",
-      github: "https://github.com/arijitroy667/Vaultopia",
-      demo: "https://vaultopia-beta.vercel.app/",
-    },
+    
   ];
 
   const categories = ["All", "AI/ML", "Full Stack", "Blockchain"];
